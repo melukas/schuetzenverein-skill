@@ -1,10 +1,7 @@
 const fs = require('fs');
-let koenige_raw = fs.readFileSync('./data/koenige.json');
-let jungschuezten_raw = fs.readFileSync('./data/jungschuetzen.json');
 
-
-let koenige = JSON.parse(koenige_raw);
-let jungschuetzen = JSON.parse(jungschuezten_raw);
+let koenige = JSON.parse(fs.readFileSync('./data/koenige.json'));
+let jungschuetzen = JSON.parse(fs.readFileSync('./data/jungschuetzen.json'));
 
 module.exports = {
     nextSchuetzenfest: function (date) {
@@ -30,16 +27,19 @@ module.exports = {
     },
 
     kingInfo2: function (years) {
-        return getKingInfo2(years);
+        return getKingInfoForBackwards(years);
     },
 
     throneInfo2: function (years) {
-        return getThroneInfo2(years);
-    }
+        return getThroneInfoBackwards(years);
+    },
 
+    jungschuetzenBackwards: function (year) {
+        return jungschuetzenBackwards(year);
+    },
 }
 
-function getThroneInfo2(years) {
+function getThroneInfoBackwards(years) {
     const year = new Date().getFullYear()-years;
     return getThroneInfo(year);
 }
@@ -53,7 +53,7 @@ function getThroneInfo(year) {
         return "Mir liegen leider nur Informationen zu den Schützenfesten ab dem Jahre 1949 vor.";
     }
 
-    const koenigInfo = getKingValues(year);
+    const koenigInfo = getKingValues(year, koenige);
     let output = getKingInfo(year);
 
     if (koenigInfo.hofstaat === "[]") {
@@ -83,7 +83,7 @@ function getThroneInfo(year) {
     return output;
 }
 
-function getKingInfo2(years) {
+function getKingInfoForBackwards(years) {
     const year = new Date().getFullYear()-years;
     return getKingInfo(year);
 }
@@ -95,12 +95,11 @@ function getKingInfo(year) {
         year = new Date().getFullYear();
     }
 
-
     if (checkForFirstYear(year)) {
         return "Mir liegen leider nur Informationen zu den Schützenfesten ab dem Jahre 1949 vor.";
     }
 
-    let koenigInfo = getKingValues(year);
+    let koenigInfo = getKingValues(year, koenige);
 
     let output;
 
@@ -147,19 +146,6 @@ function getKingInfo(year) {
     output += koenigInfo.name_begleitung + ".";
 
     return output;
-}
-
-function getKingValues(year) {
-    let koenigInfo = koenige.filter(function (item) {
-        return item.beginn_jahr <= year && item.ende_jahr > year;
-    })[0];
-
-
-    if (koenigInfo === undefined) {
-        let maxYear = Math.max.apply(Math, koenige.map(function (o) { return o.beginn_jahr; }));
-        koenigInfo = getKingValues(maxYear);
-    }
-    return koenigInfo;
 }
 
 function calcDaysUntilNext() {
@@ -218,21 +204,43 @@ function calcNextSchuetzenfest(date) {
         result = result + " wahrscheinlich ";
     }
 
-
     beginn = beginn.toLocaleString('de-DE', { month: 'long', day: "numeric", timeZone: 'Europe/Berlin' });
     ende = ende.toLocaleString('de-DE', { month: 'long', day: "numeric", timeZone: 'Europe/Berlin' });
-
 
     result = result + 'von Samstag, den ' + beginn + ', bis Dienstag, den ' + ende + ' statt.';
 
     return result;
 }
 
-function calcRelevantYear(ende, date) {
-    if (ende.getTime() < (new Date().getTime() - 24 * 3600 * 1000)) {
-        return date.getFullYear() + 1;
+function jungschuetzenBackwards(year) {
+    if (year === undefined) {
+        year = new Date().getFullYear();
     }
-    return date.getFullYear();
+
+    if (checkForFirstJungschuetzenYear(year)) {
+        return "Heiner Schulze Niehues schoss sich im Jahre 1970 zum ersten König der Jungschützen.";
+    }
+
+    const koenigInfo = getKingValues(year, jungschuetzen);
+
+    if (koenigInfo.ende_jahr === 9999) {
+       return "In Freckenhorst regiert " + koenigInfo.name + " die Jungschützenkompanie."
+    } else {
+        return "Im Jahre " + koenigInfo.beginn_jahr + " schoss sich " + koenigInfo.name + " zum König der Jungschützen.";
+    }
+}
+
+function getKingValues(year, data) {
+    let koenigInfo = data.filter(function (item) {
+        return item.beginn_jahr <= year && item.ende_jahr > year;
+    })[0];
+
+
+    if (koenigInfo === undefined) {
+        let maxYear = Math.max.apply(Math, data.map(function (o) { return o.beginn_jahr; }));
+        koenigInfo = getKingValues(maxYear, data);
+    }
+    return koenigInfo;
 }
 
 function getSpecialYearInfo(year) {
@@ -271,6 +279,10 @@ function checkForFirstYear(year) {
     return year < 1949;
 }
 
+function checkForFirstJungschuetzenYear(year) {
+    return year < 1970;
+}
+
 function calcBeginn(year) {
     let beginn = new Date(year, 6, 30);
     const verschiebung = new Date(year, 6, 31).getDay();
@@ -283,5 +295,4 @@ function calcEnde(year) {
     const verschiebung = new Date(year, 6, 31).getDay();
     ende.setDate(ende.getDate() - verschiebung);
     return ende;
-
 }

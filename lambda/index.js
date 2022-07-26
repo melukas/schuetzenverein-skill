@@ -113,6 +113,22 @@ const AskForTheThroneIntentHandler = {
     }
 };
 
+const AskForJungschuetzenIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForJungschuetzen';
+    },
+    handle(handlerInput) {
+        const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
+
+        let speechOutput = schuetzenfest.jungschuetzenBackwards(year);
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .getResponse();
+    }
+};
+
 const AskForTheThroneTwoIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -298,6 +314,7 @@ exports.handler = Alexa.SkillBuilders.custom()
         GreetingTwoIntentHandler,
         HowManyDaysIntentHandler,
         MonthOfJulyIntentHandler,
+        AskForJungschuetzenIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
