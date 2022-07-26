@@ -1,0 +1,252 @@
+[
+    {
+        "beginn_jahr": 2019,
+        "ende_jahr": 9999,
+        "name": "Kilian Windhöfel"
+    },
+    {
+        "beginn_jahr": 2018,
+        "ende_jahr": 2019,
+        "name": "Lukas Achtermann"
+    },
+    {
+        "beginn_jahr": 2017,
+        "ende_jahr": 2018,
+        "name": "Matthias Mersmann"
+    },
+    {
+        "beginn_jahr": 2016,
+        "ende_jahr": 2017,
+        "name": "Dominik Kaldewey"
+    },
+    {
+        "beginn_jahr": 2015,
+        "ende_jahr": 2016,
+        "name": "Rene Frochte"
+    },
+    {
+        "beginn_jahr": 2014,
+        "ende_jahr": 2015,
+        "name": "Christian Liekhues"
+    },
+    {
+        "beginn_jahr": 2013,
+        "ende_jahr": 2014,
+        "name": "Bernd Adick"
+    },
+    {
+        "beginn_jahr": 2012,
+        "ende_jahr": 2013,
+        "name": "Andreas Liekhues"
+    },
+    {
+        "beginn_jahr": 2011,
+        "ende_jahr": 2012,
+        "name": "Jonas Franze"
+    },
+    {
+        "beginn_jahr": 2010,
+        "ende_jahr": 2011,
+        "name": "Andreas Peveling"
+    },
+    {
+        "beginn_jahr": 2009,
+        "ende_jahr": 2010,
+        "name": "Jörg Dufhues"
+    },
+    {
+        "beginn_jahr": 2008,
+        "ende_jahr": 2009,
+        "name": "Björn Maibaum"
+    },
+    {
+        "beginn_jahr": 2007,
+        "ende_jahr": 2008,
+        "name": "Andreas Gronewäller"
+    },
+    {
+        "beginn_jahr": 2006,
+        "ende_jahr": 2007,
+        "name": "Philipp Peveling"
+    },
+    {
+        "beginn_jahr": 2005,
+        "ende_jahr": 2006,
+        "name": "Christian Siemann"
+    },
+    {
+        "beginn_jahr": 2004,
+        "ende_jahr": 2005,
+        "name": "Andreas Peveling"
+    },
+    {
+        "beginn_jahr": 2003,
+        "ende_jahr": 2004,
+        "name": "Michael Peveling"
+    },
+    {
+        "beginn_jahr": 2002,
+        "ende_jahr": 2003,
+        "name": "Frank Richter"
+    },
+    {
+        "beginn_jahr": 2001,
+        "ende_jahr": 2002,
+        "name": "Thorsten Lücke"
+    },
+    {
+        "beginn_jahr": 2000,
+        "ende_jahr": 2001,
+        "name": "Dietmar Hunkemöller"
+    },
+    {
+        "beginn_jahr": 1999,
+        "ende_jahr": 2000,
+        "name": "Dirk Bröckelmann"
+    },
+    {
+        "beginn_jahr": 1998,
+        "ende_jahr": 1999,
+        "name": "Markus Möllenbeck"
+    },
+    {
+        "beginn_jahr": 1997,
+        "ende_jahr": 1998,
+        "name": "Franz Pumpe"
+    },
+    {
+        "beginn_jahr": 1996,
+        "ende_jahr": 1997,
+        "name": "Jochen Eickelmann"
+    },
+    {
+        "beginn_jahr": 1995,
+        "ende_jahr": 1996,
+        "name": "Helmut Adick"
+    },
+    {
+        "beginn_jahr": 1994,
+        "ende_jahr": 1995,
+        "name": "Bernd Nüßing"
+    },
+    {
+        "beginn_jahr": 1993,
+        "ende_jahr": 1994,
+        "name": "Johannes Scheimann"
+    },
+    {
+        "beginn_jahr": 1992,
+        "ende_jahr": 1993,
+        "name": "Norbert Wesseler"
+    },
+    {
+        "beginn_jahr": 1991,
+        "ende_jahr": 1992,
+        "name": "Helmut Adick"
+    },
+    {
+        "beginn_jahr": 1990,
+        "ende_jahr": 1991,
+        "name": "Christian Brandt"
+    },
+    {
+        "beginn_jahr": 1989,
+        "ende_jahr": 1990,
+        "name": "Andreas Düsterhues"
+    },
+    {
+        "beginn_jahr": 1988,
+        "ende_jahr": 1989,
+        "name": "Thomas Pues"
+    },
+    {
+        "beginn_jahr": 1987,
+        "ende_jahr": 1988,
+        "name": "Arno Trautmann"
+    },
+    {
+        "beginn_jahr": 1986,
+        "ende_jahr": 1987,
+        "name": "Manfred Tünte"
+    },
+    {
+        "beginn_jahr": 1985,
+        "ende_jahr": 1986,
+        "name": "Heino Mersmann"
+    },
+    {
+        "beginn_jahr": 1984,
+        "ende_jahr": 1985,
+        "name": "Norbert Klosterkamp"
+    },
+    {
+        "beginn_jahr": 1983,
+        "ende_jahr": 1984,
+        "name": "Raimund Franze"
+    },
+    {
+        "beginn_jahr": 1982,
+        "ende_jahr": 1983,
+        "name": "Manfred Hegselmann"
+    },
+    {
+        "beginn_jahr": 1981,
+        "ende_jahr": 1982,
+        "name": "Norbert Brinkmann"
+    },
+    {
+        "beginn_jahr": 1980,
+        "ende_jahr": 1981,
+        "name": "Heinz Josef Volkmann"
+    },
+    {
+        "beginn_jahr": 1979,
+        "ende_jahr": 1980,
+        "name": "Burkhard König"
+    },
+    {
+        "beginn_jahr": 1978,
+        "ende_jahr": 1979,
+        "name": "Georg Weiser"
+    },
+    {
+        "beginn_jahr": 1977,
+        "ende_jahr": 1978,
+        "name": "Paul Klümper"
+    },
+    {
+        "beginn_jahr": 1976,
+        "ende_jahr": 1977,
+        "name": "Josef Siemann"
+    },
+    {
+        "beginn_jahr": 1975,
+        "ende_jahr": 1976,
+        "name": "Paul Klümper"
+    },
+    {
+        "beginn_jahr": 1974,
+        "ende_jahr": 1975,
+        "name": "Heinz Terhar"
+    },
+    {
+        "beginn_jahr": 1973,
+        "ende_jahr": 1974,
+        "name": "Karl Linnemann"
+    },
+    {
+        "beginn_jahr": 1972,
+        "ende_jahr": 1973,
+        "name": "Bernfried Wolff"
+    },
+    {
+        "beginn_jahr": 1971,
+        "ende_jahr": 1972,
+        "name": "Ullrich Kirchner"
+    },
+    {
+        "beginn_jahr": 1970,
+        "ende_jahr": 1971,
+        "name": "Heiner Schulze Niehues"
+    }
+]
