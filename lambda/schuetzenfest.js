@@ -10,9 +10,9 @@ module.exports = {
         return calcNextSchuetzenfest(date);
     },
 
-    lastSchuetzenfest: function (date) {
+    lastSchuetzenfest: function () {
 
-        let dateLastSchuetzenfest = calcLastSchuetzenfestYear(date);
+        let dateLastSchuetzenfest = calcLastSchuetzenfestYear();
         return calcNextSchuetzenfest(dateLastSchuetzenfest);
     },
 
@@ -188,18 +188,14 @@ function calcDaysUntilNext() {
     return "Das Schützenfest findet in " + Math.round(diff / one_day) + " Tagen statt.";
 }
 
-function calcLastSchuetzenfestYear(date) {
-    let year = date.getFullYear() - 1;
-
-    if (checkForFirstYear(date.getFullYear())) {
-        return "Mir liegen leider nur Informationen zu den Schützenfesten ab dem Jahre 1949 vor.";
-    }
-
+function calcLastSchuetzenfestYear() {
+    let year = new Date().getFullYear() - 1;
 
     while (isSpecialYear(year)) {
         year -= 1;
     }
 
+    let date = new Date();
     date.setFullYear(year);
     return date;
 }

@@ -89,10 +89,7 @@ const AskForLastEventIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForLastEvent';
     },
     handle(handlerInput) {
-        const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
-
-
-        let speechOutput = schuetzenfest.lastSchuetzenfest(new Date(year, 0, 1));
+        let speechOutput = schuetzenfest.lastSchuetzenfest();
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -307,7 +304,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Du kannst mich fragen, in wie vielen Tagen das nächste Schützenfest stattfindet! Wie kann ich dir helfen?';
+        const speakOutput = 'Du kannst mich fragen, in wie vielen Tagen das nächste Schützenfest stattfindet oder wer im Jahre 2013 auf dem Thron war. Wie kann ich dir helfen?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
