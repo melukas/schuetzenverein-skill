@@ -2,6 +2,8 @@ const fs = require('fs');
 
 let koenige = JSON.parse(fs.readFileSync('./data/koenige.json'));
 let jungschuetzen = JSON.parse(fs.readFileSync('./data/jungschuetzen.json'));
+let damen = JSON.parse(fs.readFileSync('./data/damen.json'));
+let ehrengarde = JSON.parse(fs.readFileSync('./data/ehrengarde.json'));
 
 module.exports = {
     nextSchuetzenfest: function (date) {
@@ -34,8 +36,28 @@ module.exports = {
         return getThroneInfoBackwards(years);
     },
 
-    jungschuetzenBackwards: function (year) {
-        return jungschuetzenBackwards(year);
+    jungschuetzenInfo: function (year) {
+        return getJungschuetzenInfo(year);
+    },
+
+    jungschuetzenInfoBackwards: function (year) {
+        return getJungschuetzenInfoBackwards(year);
+    },
+
+    damenInfo: function (year) {
+        return getDamenInfo(year);
+    },
+
+    damenInfoBackwards: function (year) {
+        return getDamenInfoBackwards(year);
+    },
+
+    ehrengardeInfo: function (year) {
+        return getEhrengardeInfo(year);
+    },
+
+    ehrengardeInfoBackwards: function (year) {
+        return getEhrengardeInfoBackwards(year);
     },
 }
 
@@ -212,7 +234,12 @@ function calcNextSchuetzenfest(date) {
     return result;
 }
 
-function jungschuetzenBackwards(year) {
+function getJungschuetzenInfoBackwards(years) {
+    const year = new Date().getFullYear()-years;
+    return getJungschuetzenInfo(year);
+}
+
+function getJungschuetzenInfo(year) {
     if (year === undefined) {
         year = new Date().getFullYear();
     }
@@ -224,9 +251,55 @@ function jungschuetzenBackwards(year) {
     const koenigInfo = getKingValues(year, jungschuetzen);
 
     if (koenigInfo.ende_jahr === 9999) {
-       return "In Freckenhorst regiert " + koenigInfo.name + " die Jungschützenkompanie."
+        return koenigInfo.name + " regiert derzeit die Jungschützenkompanie."
     } else {
         return "Im Jahre " + koenigInfo.beginn_jahr + " schoss sich " + koenigInfo.name + " zum König der Jungschützen.";
+    }
+}
+
+function getDamenInfoBackwards(years) {
+    const year = new Date().getFullYear()-years;
+    return getDamenInfo(year);
+}
+
+function getDamenInfo(year) {
+    if (year === undefined) {
+        year = new Date().getFullYear();
+    }
+
+    if (checkForFirstDamenYear(year)) {
+        return "Natalie Wessel-Terharn schoss sich im Jahre 2012 zur ersten Königin der Formation der Damen.";
+    }
+
+    const koenigInfo = getKingValues(year, damen);
+
+    if (koenigInfo.ende_jahr === 9999) {
+        return koenigInfo.name + " regiert derzeit die Formation der Damen."
+    } else {
+        return "Im Jahre " + koenigInfo.beginn_jahr + " schoss sich " + koenigInfo.name + " zur Königin der Formation der Damen.";
+    }
+}
+
+function getEhrengardeInfoBackwards(years) {
+    const year = new Date().getFullYear()-years;
+    return getEhrengardeInfo(year);
+}
+
+function getEhrengardeInfo(year) {
+    if (year === undefined) {
+        year = new Date().getFullYear();
+    }
+
+    if (checkForFirstEhrengardeYear(year)) {
+        return "König Hagemeier war im Jahre 1970 erster Regent der Ehrengarde.";
+    }
+
+    const koenigInfo = getKingValues(year, ehrengarde);
+
+    if (koenigInfo.ende_jahr === 9999) {
+        return "König " + koenigInfo.name + " regiert derzeit die Ehrengarde."
+    } else {
+        return "König " + koenigInfo.name + " war im Jahre " + koenigInfo.beginn_jahr + " Regent der Ehrengarde.";
     }
 }
 
@@ -280,6 +353,14 @@ function checkForFirstYear(year) {
 }
 
 function checkForFirstJungschuetzenYear(year) {
+    return year < 1970;
+}
+
+function checkForFirstDamenYear(year) {
+    return year < 2012;
+}
+
+function checkForFirstEhrengardeYear(year) {
     return year < 1970;
 }
 

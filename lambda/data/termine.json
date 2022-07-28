@@ -1,0 +1,29 @@
+[
+  {
+    "typ": "antreten",
+    "date": "2022-07-31T10:15:00",
+    "formationen": [
+      "schützen",
+      "thron"
+    ],
+    "info": "Antreten aller Schützen und der Throngesellschaft auf dem Stiftsmarkt. Die Schützen tragen Schützenhut."
+  },
+  {
+    "typ": "antreten",
+    "date": "2022-07-31T13:30:00",
+    "formationen": [
+      "schützen",
+      "thron"
+    ],
+    "info": "Antreten des gesamten Schützenkorps auf dem Stiftsmarkt. Die Schützen tragen Paradeuniform mit Schützenhut, Bandalier und Gewehr."
+  },
+  {
+    "typ": "antreten",
+    "date": "2022-07-31T19:25:00",
+    "formationen": [
+      "schützen",
+      "thron"
+    ],
+    "info": "Die Schützen sammeln sich mit ihren Partnern auf dem Stiftsmarkt.  Die Schützen tragen Uniform ohne Hut, Bandalier und Gewehr."
+  }
+]

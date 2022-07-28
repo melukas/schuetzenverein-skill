@@ -1,0 +1,252 @@
+[
+  {
+    "beginn_jahr": 2019,
+    "ende_jahr": 9999,
+    "name": "Peveling"
+  },
+  {
+    "beginn_jahr": 2018,
+    "ende_jahr": 2019,
+    "name": "Nilles"
+  },
+  {
+    "beginn_jahr": 2017,
+    "ende_jahr": 2018,
+    "name": "Luchtefeld"
+  },
+  {
+    "beginn_jahr": 2016,
+    "ende_jahr": 2017,
+    "name": "Reimer"
+  },
+  {
+    "beginn_jahr": 2015,
+    "ende_jahr": 2016,
+    "name": "Hartmeyer"
+  },
+  {
+    "beginn_jahr": 2014,
+    "ende_jahr": 2015,
+    "name": "Kraß"
+  },
+  {
+    "beginn_jahr": 2013,
+    "ende_jahr": 2014,
+    "name": "Friehe"
+  },
+  {
+    "beginn_jahr": 2012,
+    "ende_jahr": 2013,
+    "name": "Leowald"
+  },
+  {
+    "beginn_jahr": 2011,
+    "ende_jahr": 2012,
+    "name": "Brunsmann"
+  },
+  {
+    "beginn_jahr": 2010,
+    "ende_jahr": 2011,
+    "name": "Nilles"
+  },
+  {
+    "beginn_jahr": 2009,
+    "ende_jahr": 2010,
+    "name": "Stukenbrok"
+  },
+  {
+    "beginn_jahr": 2008,
+    "ende_jahr": 2009,
+    "name": "Luchtefeld"
+  },
+  {
+    "beginn_jahr": 2007,
+    "ende_jahr": 2008,
+    "name": "Finkenbrink"
+  },
+  {
+    "beginn_jahr": 2006,
+    "ende_jahr": 2007,
+    "name": "Brunsmann"
+  },
+  {
+    "beginn_jahr": 2005,
+    "ende_jahr": 2006,
+    "name": "Tietze"
+  },
+  {
+    "beginn_jahr": 2004,
+    "ende_jahr": 2005,
+    "name": "Feldmann"
+  },
+  {
+    "beginn_jahr": 2003,
+    "ende_jahr": 2004,
+    "name": "Schäfer"
+  },
+  {
+    "beginn_jahr": 2002,
+    "ende_jahr": 2003,
+    "name": "Düsterhues"
+  },
+  {
+    "beginn_jahr": 2001,
+    "ende_jahr": 2002,
+    "name": "Pues"
+  },
+  {
+    "beginn_jahr": 2000,
+    "ende_jahr": 2001,
+    "name": "Tünte"
+  },
+  {
+    "beginn_jahr": 1999,
+    "ende_jahr": 2000,
+    "name": "Nienberg"
+  },
+  {
+    "beginn_jahr": 1998,
+    "ende_jahr": 1999,
+    "name": "Terhar"
+  },
+  {
+    "beginn_jahr": 1997,
+    "ende_jahr": 1998,
+    "name": "Dühlmann"
+  },
+  {
+    "beginn_jahr": 1996,
+    "ende_jahr": 1997,
+    "name": "Polenske"
+  },
+  {
+    "beginn_jahr": 1995,
+    "ende_jahr": 1996,
+    "name": "Nienberg"
+  },
+  {
+    "beginn_jahr": 1994,
+    "ende_jahr": 1995,
+    "name": "Dühlmann"
+  },
+  {
+    "beginn_jahr": 1993,
+    "ende_jahr": 1994,
+    "name": "Hegselmann"
+  },
+  {
+    "beginn_jahr": 1992,
+    "ende_jahr": 1993,
+    "name": "Pawlewski"
+  },
+  {
+    "beginn_jahr": 1991,
+    "ende_jahr": 1992,
+    "name": "Reinker"
+  },
+  {
+    "beginn_jahr": 1990,
+    "ende_jahr": 1991,
+    "name": "Dühlmann"
+  },
+  {
+    "beginn_jahr": 1989,
+    "ende_jahr": 1990,
+    "name": "Huesmann"
+  },
+  {
+    "beginn_jahr": 1988,
+    "ende_jahr": 1989,
+    "name": "Pawlewski"
+  },
+  {
+    "beginn_jahr": 1987,
+    "ende_jahr": 1988,
+    "name": "Klemann"
+  },
+  {
+    "beginn_jahr": 1986,
+    "ende_jahr": 1987,
+    "name": "Polenske"
+  },
+  {
+    "beginn_jahr": 1985,
+    "ende_jahr": 1986,
+    "name": "Reinker"
+  },
+  {
+    "beginn_jahr": 1984,
+    "ende_jahr": 1985,
+    "name": "Weiser"
+  },
+  {
+    "beginn_jahr": 1983,
+    "ende_jahr": 1984,
+    "name": "Halbuer"
+  },
+  {
+    "beginn_jahr": 1982,
+    "ende_jahr": 1983,
+    "name": "Polenske"
+  },
+  {
+    "beginn_jahr": 1981,
+    "ende_jahr": 1982,
+    "name": "Gralki"
+  },
+  {
+    "beginn_jahr": 1980,
+    "ende_jahr": 1981,
+    "name": "Reimer"
+  },
+  {
+    "beginn_jahr": 1979,
+    "ende_jahr": 1980,
+    "name": "Reimer"
+  },
+  {
+    "beginn_jahr": 1978,
+    "ende_jahr": 1979,
+    "name": "Beuning"
+  },
+  {
+    "beginn_jahr": 1977,
+    "ende_jahr": 1978,
+    "name": "Dufhues"
+  },
+  {
+    "beginn_jahr": 1976,
+    "ende_jahr": 1977,
+    "name": "Röhrs"
+  },
+  {
+    "beginn_jahr": 1975,
+    "ende_jahr": 1976,
+    "name": "Bergmann"
+  },
+  {
+    "beginn_jahr": 1974,
+    "ende_jahr": 1975,
+    "name": "Nüßing"
+  },
+  {
+    "beginn_jahr": 1973,
+    "ende_jahr": 1974,
+    "name": "Middendorf"
+  },
+  {
+    "beginn_jahr": 1972,
+    "ende_jahr": 1973,
+    "name": "Hagemeier"
+  },
+  {
+    "beginn_jahr": 1971,
+    "ende_jahr": 1972,
+    "name": "Röhrs"
+  },
+  {
+    "beginn_jahr": 1970,
+    "ende_jahr": 1971,
+    "name": "Hagemeier"
+  }
+]

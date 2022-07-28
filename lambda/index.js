@@ -38,6 +38,7 @@ const AskForNextEventIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -49,16 +50,18 @@ const GreetingIntentHandler = {
     },
     handle(handlerInput) {
 
-        let output = "Do"
+        let output;
         counter++;
 
-        if (counter === 2) {
-            output = "Do. Hussa, hussa, husssasssasssa."
+        if (counter === 3) {
+            output = "Do. Hussa, hussa, husssasssasssa. Ein Horrido, ein Horrido, ein Waidmannsheil. Ein Horrido, ein Horrido ein Waidmannsheil. Horrido, horrido, Waidmannsheil."
             counter = 0
             return handlerInput.responseBuilder
                 .speak(output)
+                .withShouldEndSession(false)
                 .getResponse();
         }
+        output = "Do"
 
         return handlerInput.responseBuilder
             .speak(output)
@@ -75,6 +78,7 @@ const GreetingTwoIntentHandler = {
     handle(handlerInput) {
         return handlerInput.responseBuilder
             .speak("Horrido")
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -88,11 +92,11 @@ const AskForLastEventIntentHandler = {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
 
-
         let speechOutput = schuetzenfest.lastSchuetzenfest(new Date(year, 0, 1));
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -109,6 +113,7 @@ const AskForTheThroneIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -121,10 +126,96 @@ const AskForJungschuetzenIntentHandler = {
     handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = schuetzenfest.jungschuetzenBackwards(year);
+        let speechOutput = schuetzenfest.jungschuetzenInfo(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
+            .withShouldEndSession(false)
+            .getResponse();
+    }
+};
+
+const AskForJungschuetzenTwoIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForJungschuetzenTwo';
+    },
+    handle(handlerInput) {
+        const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
+
+        let speechOutput = schuetzenfest.jungschuetzenInfoBackwards(years);
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(false)
+            .getResponse();
+    }
+};
+
+const AskForDamenIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForDamen';
+    },
+    handle(handlerInput) {
+        const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
+
+        let speechOutput = schuetzenfest.damenInfo(year);
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(false)
+            .getResponse();
+    }
+};
+
+const AskForDamenTwoIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForDamenTwo';
+    },
+    handle(handlerInput) {
+        const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
+
+        let speechOutput = schuetzenfest.damenInfoBackwards(years);
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(false)
+            .getResponse();
+    }
+};
+
+const AskForEhrengardeIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForEhrengarde';
+    },
+    handle(handlerInput) {
+        const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
+
+        let speechOutput = schuetzenfest.ehrengardeInfo(year);
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(false)
+            .getResponse();
+    }
+};
+
+const AskForEhrengardeTwoIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForEhrengardeTwo';
+    },
+    handle(handlerInput) {
+        const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
+
+        let speechOutput = schuetzenfest.ehrengardeInfoBackwards(years);
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -141,6 +232,7 @@ const AskForTheThroneTwoIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -155,6 +247,7 @@ const HowManyDaysIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -171,6 +264,7 @@ const AskForTheKingIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -187,6 +281,7 @@ const AskForTheKingTwoIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -198,9 +293,10 @@ const MonthOfJulyIntentHandler = {
     },
     handle(handlerInput) {
         const output = "Wenn im Monat Juli die Schützen ziehen aus, dann ist in Friäkens niemand mehr zu Haus."
-        
+
         return handlerInput.responseBuilder
             .speak(output)
+            .withShouldEndSession(false)
             .getResponse();
     }
 };
@@ -227,10 +323,11 @@ const CancelAndStopIntentHandler = {
                 || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        const speakOutput = 'Auf Wiedersehen!';
+        const speakOutput = 'Auf Wiedersehen und bis zum nächsten Schützenfest!';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
+            .withShouldEndSession(true)
             .getResponse();
     }
 };
@@ -241,7 +338,7 @@ const FallbackIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Darauf habe ich leider keine Antwort.';
+        const speakOutput = 'Das weiß ich leider noch nicht - aber ich lerne ständig dazu.';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -315,6 +412,11 @@ exports.handler = Alexa.SkillBuilders.custom()
         HowManyDaysIntentHandler,
         MonthOfJulyIntentHandler,
         AskForJungschuetzenIntentHandler,
+        AskForJungschuetzenTwoIntentHandler,
+        AskForDamenIntentHandler,
+        AskForDamenTwoIntentHandler,
+        AskForEhrengardeIntentHandler,
+        AskForEhrengardeTwoIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
