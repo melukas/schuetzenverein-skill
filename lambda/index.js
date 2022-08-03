@@ -103,10 +103,10 @@ const AskForTheThroneIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForTheThrone';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = schuetzenfest.throneInfo(year);
+        let speechOutput = await schuetzenfest.throneInfo(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -120,10 +120,10 @@ const AskForJungschuetzenIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForJungschuetzen';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = schuetzenfest.jungschuetzenInfo(year);
+        let speechOutput = await schuetzenfest.jungschuetzenInfo(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -137,10 +137,10 @@ const AskForJungschuetzenTwoIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForJungschuetzenTwo';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = schuetzenfest.jungschuetzenInfoBackwards(years);
+        let speechOutput = await schuetzenfest.jungschuetzenInfoBackwards(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -154,10 +154,10 @@ const AskForDamenIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForDamen';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = schuetzenfest.damenInfo(year);
+        let speechOutput = await schuetzenfest.damenInfo(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -171,10 +171,10 @@ const AskForDamenTwoIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForDamenTwo';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = schuetzenfest.damenInfoBackwards(years);
+        let speechOutput = await schuetzenfest.damenInfoBackwards(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -188,10 +188,10 @@ const AskForEhrengardeIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForEhrengarde';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = schuetzenfest.ehrengardeInfo(year);
+        let speechOutput = await schuetzenfest.ehrengardeInfo(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -205,10 +205,10 @@ const AskForEhrengardeTwoIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForEhrengardeTwo';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = schuetzenfest.ehrengardeInfoBackwards(years);
+        let speechOutput = await schuetzenfest.ehrengardeInfoBackwards(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -222,10 +222,10 @@ const AskForTheThroneTwoIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForTheThroneTwo';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = schuetzenfest.throneInfo2(years);
+        let speechOutput = await schuetzenfest.throneInfo2(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -254,10 +254,10 @@ const AskForTheKingIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForTheKing';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = schuetzenfest.kingInfo(year);
+        let speechOutput = await schuetzenfest.kingInfo(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -271,10 +271,10 @@ const AskForTheKingTwoIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForTheKingTwo';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = schuetzenfest.kingInfo2(years);
+        let speechOutput = await schuetzenfest.kingInfo2(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)

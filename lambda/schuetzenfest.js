@@ -1,9 +1,14 @@
-const fs = require('fs');
+var https = require('https');
 
-let koenige = JSON.parse(fs.readFileSync('./data/koenige.json'));
-let jungschuetzen = JSON.parse(fs.readFileSync('./data/jungschuetzen.json'));
-let damen = JSON.parse(fs.readFileSync('./data/damen.json'));
-let ehrengarde = JSON.parse(fs.readFileSync('./data/ehrengarde.json'));
+let koenigePath = '/melukas/schuetzenverein-skill/main/lambda/data/koenige.json'
+let jungschuetzenPath = '/melukas/schuetzenverein-skill/main/lambda/data/jungschuetzen.json'
+let damenPath = '/melukas/schuetzenverein-skill/main/lambda/data/damen.json'
+let ehrengardePath = '/melukas/schuetzenverein-skill/main/lambda/data/ehrengarde.json'
+
+let koenige;
+let jungschuetzen;
+let damen;
+let ehrengarde;
 
 module.exports = {
     nextSchuetzenfest: function (date) {
@@ -20,53 +25,54 @@ module.exports = {
         return calcDaysUntilNext();
     },
 
-    kingInfo: function (year) {
+    kingInfo: async function (year) {
         return getKingInfo(year);
     },
 
-    throneInfo: function (year) {
+    throneInfo: async function (year) {
         return getThroneInfo(year);
     },
 
-    kingInfo2: function (years) {
+    kingInfo2: async function (years) {
         return getKingInfoForBackwards(years);
     },
 
-    throneInfo2: function (years) {
+    throneInfo2: async function (years) {
         return getThroneInfoBackwards(years);
     },
 
-    jungschuetzenInfo: function (year) {
+    jungschuetzenInfo: async function (year) {
         return getJungschuetzenInfo(year);
     },
 
-    jungschuetzenInfoBackwards: function (year) {
+    jungschuetzenInfoBackwards: async function (year) {
         return getJungschuetzenInfoBackwards(year);
     },
 
-    damenInfo: function (year) {
+    damenInfo: async function (year) {
         return getDamenInfo(year);
     },
 
-    damenInfoBackwards: function (year) {
+    damenInfoBackwards: async function (year) {
         return getDamenInfoBackwards(year);
     },
 
-    ehrengardeInfo: function (year) {
+    ehrengardeInfo: async function (year) {
         return getEhrengardeInfo(year);
     },
 
-    ehrengardeInfoBackwards: function (year) {
+    ehrengardeInfoBackwards: async function (year) {
         return getEhrengardeInfoBackwards(year);
     },
 }
 
-function getThroneInfoBackwards(years) {
-    const year = new Date().getFullYear()-years;
+async function getThroneInfoBackwards(years) {
+    const year = new Date().getFullYear() - years;
     return getThroneInfo(year);
 }
 
-function getThroneInfo(year) {
+async function getThroneInfo(year) {
+    await loadData();
     if (year === undefined) {
         year = new Date().getFullYear();
     }
@@ -105,14 +111,14 @@ function getThroneInfo(year) {
     return output;
 }
 
-function getKingInfoForBackwards(years) {
-    const year = new Date().getFullYear()-years;
+async function getKingInfoForBackwards(years) {
+    const year = new Date().getFullYear() - years;
     return getKingInfo(year);
 }
 
 
-function getKingInfo(year) {
-
+async function getKingInfo(year) {
+    await loadData();
     if (year === undefined) {
         year = new Date().getFullYear();
     }
@@ -185,7 +191,13 @@ function calcDaysUntilNext() {
         return "Ab auf den Schützenplatz, denn das Schützenfest findet aktuell statt."
     }
 
-    return "Das Schützenfest findet in " + Math.round(diff / one_day) + " Tagen statt.";
+    let differenz = Math.round(diff / one_day) + 1;
+
+    if (differenz === 1) {
+        return "Das Schützenfest startet morgen!"
+    }
+
+    return "Das Schützenfest findet in " + differenz + " Tagen statt.";
 }
 
 function calcLastSchuetzenfestYear() {
@@ -222,20 +234,21 @@ function calcNextSchuetzenfest(date) {
         result = result + " wahrscheinlich ";
     }
 
-    beginn = beginn.toLocaleString('de-DE', { month: 'long', day: "numeric", timeZone: 'Europe/Berlin' });
-    ende = ende.toLocaleString('de-DE', { month: 'long', day: "numeric", timeZone: 'Europe/Berlin' });
+    beginn = beginn.toLocaleString('de-DE', {month: 'long', day: "numeric", timeZone: 'Europe/Berlin'});
+    ende = ende.toLocaleString('de-DE', {month: 'long', day: "numeric", timeZone: 'Europe/Berlin'});
 
     result = result + 'von Samstag, den ' + beginn + ', bis Dienstag, den ' + ende + ' statt.';
 
     return result;
 }
 
-function getJungschuetzenInfoBackwards(years) {
-    const year = new Date().getFullYear()-years;
+async function getJungschuetzenInfoBackwards(years) {
+    const year = new Date().getFullYear() - years;
     return getJungschuetzenInfo(year);
 }
 
-function getJungschuetzenInfo(year) {
+async function getJungschuetzenInfo(year) {
+    await loadData();
     if (year === undefined) {
         year = new Date().getFullYear();
     }
@@ -253,12 +266,13 @@ function getJungschuetzenInfo(year) {
     }
 }
 
-function getDamenInfoBackwards(years) {
-    const year = new Date().getFullYear()-years;
+async function getDamenInfoBackwards(years) {
+    const year = new Date().getFullYear() - years;
     return getDamenInfo(year);
 }
 
-function getDamenInfo(year) {
+async function getDamenInfo(year) {
+    await loadData();
     if (year === undefined) {
         year = new Date().getFullYear();
     }
@@ -276,12 +290,13 @@ function getDamenInfo(year) {
     }
 }
 
-function getEhrengardeInfoBackwards(years) {
-    const year = new Date().getFullYear()-years;
+async function getEhrengardeInfoBackwards(years) {
+    const year = new Date().getFullYear() - years;
     return getEhrengardeInfo(year);
 }
 
-function getEhrengardeInfo(year) {
+async function getEhrengardeInfo(year) {
+    await loadData();
     if (year === undefined) {
         year = new Date().getFullYear();
     }
@@ -297,6 +312,7 @@ function getEhrengardeInfo(year) {
     } else {
         return "König " + koenigInfo.name + " war im Jahre " + koenigInfo.beginn_jahr + " Regent der Ehrengarde.";
     }
+
 }
 
 function getKingValues(year, data) {
@@ -306,7 +322,9 @@ function getKingValues(year, data) {
 
 
     if (koenigInfo === undefined) {
-        let maxYear = Math.max.apply(Math, data.map(function (o) { return o.beginn_jahr; }));
+        let maxYear = Math.max.apply(Math, data.map(function (o) {
+            return o.beginn_jahr;
+        }));
         koenigInfo = getKingValues(maxYear, data);
     }
     return koenigInfo;
@@ -330,6 +348,44 @@ function getSpecialYearInfo(year) {
         default:
             return undefined;
     }
+}
+
+async function loadData() {
+    if (koenige === undefined || jungschuetzen === undefined || damen === undefined || ehrengarde === undefined) {
+        koenige = await httpGet(koenigePath);
+        jungschuetzen = await httpGet(jungschuetzenPath);
+        damen = await httpGet(damenPath);
+        ehrengarde = await httpGet(ehrengardePath);
+    }
+}
+
+function httpGet(path) {
+    return new Promise(((resolve, reject) => {
+        const options = {
+            host: 'raw.githubusercontent.com',
+            port: 443,
+            path: path,
+            method: 'GET',
+        };
+
+        const request = https.request(options, (response) => {
+            response.setEncoding('utf8');
+            let returnData = '';
+
+            response.on('data', (chunk) => {
+                returnData += chunk;
+            });
+
+            response.on('end', () => {
+                resolve(JSON.parse(returnData));
+            });
+
+            response.on('error', (error) => {
+                reject(error);
+            });
+        });
+        request.end();
+    }));
 }
 
 function isSpecialYear(year) {
