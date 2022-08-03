@@ -1,7 +1,12 @@
 [
   {
-    "beginn_jahr": 2019,
+    "beginn_jahr": 2022,
     "ende_jahr": 9999,
+    "name": "Friehe"
+  },
+  {
+    "beginn_jahr": 2019,
+    "ende_jahr": 2022,
     "name": "Peveling"
   },
   {

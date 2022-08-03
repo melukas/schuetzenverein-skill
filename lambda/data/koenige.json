@@ -1173,7 +1173,7 @@
     "beginn_jahr": 2019,
     "beschreibung": "",
     "bisherige_regentschaften": 0,
-    "ende_jahr": 9999,
+    "ende_jahr": 2022,
     "geschlecht_koenig": "m",
     "geschlecht_koenigin": "w",
     "hofstaat": [
@@ -1185,5 +1185,21 @@
     "koenigsschuss": 304,
     "name": "Alfons Keßmann",
     "name_begleitung": "Gabi Keßmann"
+  },
+  {
+    "beginn_jahr": 2022,
+    "beschreibung": "",
+    "bisherige_regentschaften": 0,
+    "ende_jahr": 9999,
+    "geschlecht_koenig": "m",
+    "geschlecht_koenigin": "w",
+    "hofstaat": [
+      "Markus und Anne Böhmer",
+      "Dieter und Nicole Brüggemann",
+      "Georg und Simone Dühlmann"
+    ],
+    "koenigsschuss": 328,
+    "name": "Richard Uhkötter",
+    "name_begleitung": "Sandra Uhkötter"
   }
 ]
