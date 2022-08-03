@@ -82,7 +82,7 @@ async function getThroneInfo(year) {
     }
 
     const koenigInfo = getKingValues(year, koenige);
-    let output = getKingInfo(year);
+    let output = await getKingInfo(year);
 
     if (koenigInfo.hofstaat === "[]") {
         return output + " Zum Hofstaat liegen mir leider keine Informationen vor."
