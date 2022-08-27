@@ -1,9 +1,6 @@
 var https = require('https');
 
-let koenigePath = '/melukas/schuetzenverein-skill/main/lambda/data/koenige.json'
-let jungschuetzenPath = '/melukas/schuetzenverein-skill/main/lambda/data/jungschuetzen.json'
-let damenPath = '/melukas/schuetzenverein-skill/main/lambda/data/damen.json'
-let ehrengardePath = '/melukas/schuetzenverein-skill/main/lambda/data/ehrengarde.json'
+let dataPath = '/melukas/schuetzenverein-skill/main/lambda/data/data.json'
 
 let koenige;
 let jungschuetzen;
@@ -201,28 +198,47 @@ function calcDaysUntilNext() {
 }
 
 function calcLastSchuetzenfestYear() {
-    let year = new Date().getFullYear() - 1;
+    const jetzt = new Date();
+    const beginn = calcBeginn(jetzt.getFullYear());
+
+    let year;
+
+    if (beginn.getTime() < (jetzt.getTime() - 24 * 3600 * 1000)) {
+        year = jetzt.getFullYear();
+    } else {
+        year = jetzt.getFullYear() - 1;
+    }
 
     while (isSpecialYear(year)) {
         year -= 1;
     }
 
-    let date = new Date();
-    date.setFullYear(year);
-    return date;
+    return new Date(year, 0, 1);
 }
 
 function calcNextSchuetzenfest(date) {
-    let specInfo = getSpecialYearInfo(date.getFullYear());
+    let beginn = calcBeginn(date.getFullYear());
+    let ende = calcEnde(date.getFullYear());
+    let year;
+
+    if (ende.getTime() < (date.getTime() - 24 * 3600 * 1000)) {
+        year = date.getFullYear() + 1;
+    } else if (beginn.getTime() > (date.getTime() - 24 * 3600 * 1000)) {
+        year = date.getFullYear();
+    } else {
+        return "Ab auf den Schützenplatz, denn das Schützenfest findet aktuell statt."
+    }
+
+    let specInfo = getSpecialYearInfo(year);
 
     if (specInfo !== undefined) {
         return specInfo;
     }
 
-    let beginn = calcBeginn(date.getFullYear());
-    let ende = calcEnde(date.getFullYear());
+    beginn = calcBeginn(year);
+    ende = calcEnde(year);
 
-    let result = "Das Schützenfest " + date.getFullYear();
+    let result = "Das Schützenfest " + year;
 
     if (ende.getTime() < (new Date().getTime() - 24 * 3600 * 1000)) {
         result = result + " fand "
@@ -230,7 +246,7 @@ function calcNextSchuetzenfest(date) {
         result = result + " findet ";
     }
 
-    if (date.getFullYear() < 1990) {
+    if (year < 1990) {
         result = result + " wahrscheinlich ";
     }
 
@@ -302,7 +318,7 @@ async function getEhrengardeInfo(year) {
     }
 
     if (checkForFirstEhrengardeYear(year)) {
-        return "König Hagemeier war im Jahre 1970 erster Regent der Ehrengarde.";
+        return "Mir liegen leider nur Informationen zu den Ehrengardenkönigen ab dem Jahre 1970 vor.";
     }
 
     const koenigInfo = getKingValues(year, ehrengarde);
@@ -352,10 +368,12 @@ function getSpecialYearInfo(year) {
 
 async function loadData() {
     if (koenige === undefined || jungschuetzen === undefined || damen === undefined || ehrengarde === undefined) {
-        koenige = await httpGet(koenigePath);
-        jungschuetzen = await httpGet(jungschuetzenPath);
-        damen = await httpGet(damenPath);
-        ehrengarde = await httpGet(ehrengardePath);
+
+        let data = await httpGet(dataPath);
+        koenige = data.koenige;
+        jungschuetzen = data.jungschuetzen;
+        damen = data.damen;
+        ehrengarde = data.ehrengarde;
     }
 }
 
