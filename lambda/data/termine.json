@@ -1,29 +1,179 @@
 [
   {
-    "typ": "antreten",
-    "date": "2022-07-31T10:15:00",
-    "formationen": [
-      "schützen",
-      "thron"
-    ],
-    "info": "Antreten aller Schützen und der Throngesellschaft auf dem Stiftsmarkt. Die Schützen tragen Schützenhut."
+    "title": "Besuch der Altenheime",
+    "type": "general",
+    "date": "30.07.2022 10:00",
+    "formationen": null,
+    "detail": "Besuch der Bewohner des Klosters zum Hl. Kreuz sowie des Dechaneihofes St. Marien."
   },
   {
-    "typ": "antreten",
-    "date": "2022-07-31T13:30:00",
-    "formationen": [
-      "schützen",
-      "thron"
-    ],
-    "info": "Antreten des gesamten Schützenkorps auf dem Stiftsmarkt. Die Schützen tragen Paradeuniform mit Schützenhut, Bandalier und Gewehr."
+    "title": "Freckenhorster Zeltfest",
+    "type": "general",
+    "date": "30.07.2022 20:00",
+    "formationen": null,
+    "detail": "Freckenhorster Zeltfest mit DJ MARKO im Zelt und der Band „FINAL EDITION“ auf der Außenbühne."
   },
   {
-    "typ": "antreten",
-    "date": "2022-07-31T19:25:00",
-    "formationen": [
-      "schützen",
-      "thron"
+    "title": "Antreten auf dem Stiftsmarkt",
+    "type": "antreten",
+    "date": "31.07.2022 10:15",
+     "formationen": [
+      "all"
     ],
-    "info": "Die Schützen sammeln sich mit ihren Partnern auf dem Stiftsmarkt.  Die Schützen tragen Uniform ohne Hut, Bandalier und Gewehr."
+    "detail": "Antreten aller Schützen und der Throngesellschaft auf dem Stiftsmarkt. Die Schützen tragen Schützenhut."
+  },
+  {
+    "title": "Schützenmesse",
+    "type": "general",
+    "date": "31.07.2022 10:30",
+    "formationen": null,
+    "detail": "Festhochamt in der Stiftskirche."
+  },
+  {
+    "title": "Antreten auf dem Stiftsmarkt",
+    "type": "antreten",
+    "date": "31.07.2022 13:30",
+     "formationen": [
+      "all"
+    ],
+    "detail": "Antreten des gesamten Schützenkorps auf dem Stiftsmarkt. Die Schützen tragen Paradeuniform mit Schützenhut, Bandalier und Gewehr. Anschließend Festumzug zum Festplatz."
+  },
+  {
+    "title": "Nachmittagsprogramm",
+    "type": "general",
+    "date": "31.07.2022 15:00",
+    "formationen": null,
+    "detail": "Die Bürgerschützen feiern mit ihren Familien und Gästen. Auf dem Festplatz an der Grundschule finden statt: Darbietungen aller Musikzüge, Königsschießen der Ehrengarde sowie der Formation der Damen (jeweils mit anschließender Krönung), Königsschießen der Jugend, Hampelmannschießen, auch für Nichtmitglieder. Bunter Familiennachmittag mit u.a. Schiffsschaukel, Kletterstange, Hüpfburg, Bogenschießen, Kisten stapeln, Bouletisch, Bungee-Run, verschiedenen Geschicklichkeitsspielen sowie dem Kinderkönigsschießen."
+  },
+  {
+    "title": "Abendkonzert",
+    "type": "general",
+    "date": "31.07.2022 19:15",
+    "formationen": null,
+    "detail": "Auf dem Stiftsmarkt gestaltet der Berittene Fanfarenzug ein Abendkonzert."
+  },
+  {
+    "title": "Antreten auf dem Stiftsmarkt",
+    "type": "antreten",
+    "date": "31.07.2022 19:25",
+     "formationen": [
+      "all"
+    ],
+    "detail": "Die Schützen sammeln sich mit ihren Partnern auf dem Stiftsmarkt. Die Schützen tragen Uniform ohne Hut, Bandalier und Gewehr. Direkt im Anschluss: Polonaise in das Festzelt. Festlicher Tanzabend bis 1.00 Uhr mit der Band „Mainstreet“."
+  },
+  {
+    "title": "Weckruf",
+    "type": "general",
+    "date": "01.08.2022 05:00",
+    "formationen": null,
+    "detail": "Weckruf durch den Spielmannszug Freckenhorst."
+  },
+  {
+    "title": "Antreten auf dem Festplatz",
+    "type": "antreten",
+    "date": "01.08.2022 08:35",
+    "formationen": [
+      "ehrengarde",
+      "jungschuetzen",
+      "damen"
+    ],
+    "detail": "Der Marsch zum Stiftsmarkt erfolgt unter Leitung des Kommandeurs der Ehrengarde Hauptmann Hendrik Rohling über die Kleistraße, Hoetmarer Straße, Warendorfer Straße, Baumstraße zum Stiftsmarkt."
+  },
+  {
+    "title": "Antreten auf dem Stiftsmarkt",
+    "type": "antreten",
+    "date": "01.08.2022 08:50",
+     "formationen": [
+      "schuetzen"
+    ],
+    "detail": "Antreten auf dem Stiftsmarkt, Festansprache durch Oberst Thomas Feldmann, Ehrungen langjähriger Mitglieder und Huldigungsrede. Anschließend Festumzug zum Festplatz."
+  },
+  {
+    "title": "Empfang im Festzelt",
+    "type": "general",
+    "date": "01.08.2022 10:30",
+    "formationen": null,
+    "detail": "Empfang im Festzelt für ehemalige Königinnen, ältere Schützen und Damen, Frauen der verstorbenen Mitglieder, Jubilare, Ehrenmitglieder und Ehrengäste."
+  },
+  {
+    "title": "Königsschießen der Jungschützen",
+    "type": "general",
+    "date": "01.08.2022 10:40",
+    "formationen": null,
+    "detail": "Beginn des Königsschießens der Jungschützen mit anschließender Krönung."
+  },
+  {
+    "title": "Krönung des Kinderkönigspaares. ",
+    "type": "general",
+    "date": "01.08.2022 11:00",
+    "formationen": null,
+    "detail": "Krönung des Kinderkönigspaares im Festzelt."
+  },
+  {
+    "title": "Königsschießen",
+    "type": "shooting",
+    "date": "01.08.2022 12:30",
+    "formationen": null,
+    "detail": "Beginn des Schießens um die Königswürde."
+  },
+  {
+    "title": "Hampelmannschießen",
+    "type": "general",
+    "date": "01.08.2022 15:00",
+    "formationen": null,
+    "detail": "Hampelmannschießen für Mitglieder."
+  },
+  {
+    "title": "Hampelmannschießen",
+    "type": "general",
+    "date": "01.08.2022 15:45",
+    "formationen": null,
+    "detail": "Hampelmannschießen auch für Nichtmitglieder."
+  },
+  {
+    "title": "Antreten auf der Festwiese",
+    "type": "antreten",
+    "date": "01.08.2022 16:30",
+     "formationen": [
+      "all"
+    ],
+    "detail": "Antreten aller Schützen auf der Festwiese. Die Schützen tragen Paradeuniform mit Schützenhut, Bandalier und Gewehr. Anschließend Festumzug vom Festplatz zum Stiftsmarkt."
+  },
+  {
+    "title": "Krönung",
+    "type": "general",
+    "date": "01.08.2022 17:00",
+    "formationen": null,
+    "detail": "Krönung des neuen Königspaares durch den Präsidenten Matthias Kalthöner. Anschließend Parade zu Ehren der Majestäten."
+  },
+  {
+    "title": "Abendkonzert",
+    "type": "general",
+    "date": "01.08.2022 19:30",
+    "formationen": null,
+    "detail": "Abendkonzert auf der Stiftsmarkt mit dem Gebrasa Spielmannszug Sassenberg."
+  },
+  {
+    "title": "Antreten auf dem Stiftsmarkt",
+    "type": "antreten",
+    "date": "01.08.2022 20:00",
+     "formationen": [
+      "all"
+    ],
+    "detail": "Polonaise vom Stiftsmarkt in das Festzelt. Die Schützen tragen Uniform ohne Hut, Bandalier und Gewehr. Großer Festball mit der Band „Fun Time“."
+  },
+  {
+    "title": "Aufräumen",
+    "type": "general",
+    "date": "02.08.2022 10:30",
+    "formationen": null,
+    "detail": "Treffen zum Aufräumen auf dem Festplatz."
+  },
+  {
+    "title": "Ausklang",
+    "type": "general",
+    "date": "02.08.2022 18:00",
+    "formationen": null,
+    "detail": "Ausklang des Bürgerschützenfestes in der Gaststätte Stiftshof Dühlmann."
   }
 ]
