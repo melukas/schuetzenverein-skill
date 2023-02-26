@@ -34,7 +34,7 @@ const AskForNextEventIntentHandler = {
             datum = new Date();
         }
 
-        let speakOutput = schuetzenfest.nextSchuetzenfest(datum);
+        let speakOutput = schuetzenfest.generiereTextWannNaechstesSchutzenfest(datum);
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -54,7 +54,7 @@ const GreetingIntentHandler = {
         counter++;
 
         if (counter === 3) {
-            output = "Do. Hussa, hussa, husssasssasssa. Ein Horrido, ein Horrido, ein Waidmannsheil. Ein Horrido, ein Horrido ein Waidmannsheil. Horrido, horrido, Waidmannsheil."
+            output = "Do. Hussa hussa, husssasssasssa. Ein Horrido, ein Horrido, ein Waidmannsheil. Ein Horrido, ein Horrido ein Waidmannsheil. Horrido, horrido, Waidmannsheil."
             counter = 0
             return handlerInput.responseBuilder
                 .speak(output)
@@ -89,7 +89,7 @@ const AskForLastEventIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AskForLastEvent';
     },
     handle(handlerInput) {
-        let speechOutput = schuetzenfest.lastSchuetzenfest();
+        let speechOutput = schuetzenfest.generiereTextWannLetztesSchutzenfest();
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -106,7 +106,7 @@ const AskForTheThroneIntentHandler = {
     async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = await schuetzenfest.throneInfo(year);
+        let speechOutput = await schuetzenfest.generiereTextFuerThronInJahr(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -123,7 +123,7 @@ const AskForJungschuetzenIntentHandler = {
     async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = await schuetzenfest.jungschuetzenInfo(year);
+        let speechOutput = await schuetzenfest.generiereTextZuJungschuetzenkoenigInJahr(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -140,7 +140,7 @@ const AskForJungschuetzenTwoIntentHandler = {
     async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = await schuetzenfest.jungschuetzenInfoBackwards(years);
+        let speechOutput = await schuetzenfest.generiereTextZuJungschuetzenkoenigVorJahren(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -157,7 +157,7 @@ const AskForDamenIntentHandler = {
     async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = await schuetzenfest.damenInfo(year);
+        let speechOutput = await schuetzenfest.generiereTextZuDamenkoeniginInJahr(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -174,7 +174,7 @@ const AskForDamenTwoIntentHandler = {
     async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = await schuetzenfest.damenInfoBackwards(years);
+        let speechOutput = await schuetzenfest.generiereTextZuDamenkoeniginVorJahren(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -191,7 +191,7 @@ const AskForEhrengardeIntentHandler = {
     async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = await schuetzenfest.ehrengardeInfo(year);
+        let speechOutput = await schuetzenfest.generiereTextZuEhrengardenkoenigInJahr(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -208,7 +208,7 @@ const AskForEhrengardeTwoIntentHandler = {
     async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = await schuetzenfest.ehrengardeInfoBackwards(years);
+        let speechOutput = await schuetzenfest.generiereTextZuEhrengardenkoenigVorJahren(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -225,7 +225,7 @@ const AskForTheThroneTwoIntentHandler = {
     async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = await schuetzenfest.throneInfo2(years);
+        let speechOutput = await schuetzenfest.generiereTextFuerThronVorJahren(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -240,7 +240,7 @@ const HowManyDaysIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HowManyDays';
     },
     handle(handlerInput) {
-        let speakOutput = schuetzenfest.daysUntilNext();
+        let speakOutput = schuetzenfest.generiereTextFuerTageBisZumNaechstenSchuetzenfest();
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -257,7 +257,7 @@ const AskForTheKingIntentHandler = {
     async handle(handlerInput) {
         const year = Alexa.getSlotValue(handlerInput.requestEnvelope, 'year');
 
-        let speechOutput = await schuetzenfest.kingInfo(year);
+        let speechOutput = await schuetzenfest.generiereTextZuKoenigspaarInJahr(year);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -274,7 +274,7 @@ const AskForTheKingTwoIntentHandler = {
     async handle(handlerInput) {
         const years = Alexa.getSlotValue(handlerInput.requestEnvelope, 'years');
 
-        let speechOutput = await schuetzenfest.kingInfo2(years);
+        let speechOutput = await schuetzenfest.generiereTextZuKoenigspaarVorJahren(years);
 
         return handlerInput.responseBuilder
             .speak(speechOutput)
