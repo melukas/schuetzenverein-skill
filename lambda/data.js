@@ -6,6 +6,7 @@ let koenige;
 let jungschuetzen;
 let damen;
 let ehrengarde;
+let termine;
 
 module.exports = {
     getKoenigeData: async function () {
@@ -19,6 +20,9 @@ module.exports = {
     },
     getEhrengardeData: async function () {
         return getEhrengardeData();
+    },
+    getTerminData: async function () {
+        return getTerminData();
     },
 }
 
@@ -54,14 +58,21 @@ async function getEhrengardeData() {
     return ehrengarde;
 }
 
+async function getTerminData() {
+    if (termine === undefined) {
+        await loadData();
+    }
+
+    return termine;
+}
+
 async function loadData() {
     let data = await httpGet(githubPath);
     koenige = data.koenige;
     jungschuetzen = data.jungschuetzen;
     damen = data.damen;
     ehrengarde = data.ehrengarde;
-    console.log("LOAD DATA")
-    console.log(koenige)
+    termine = data.termine;
 }
 
 function httpGet(path) {
