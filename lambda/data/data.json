@@ -1769,21 +1769,21 @@
     {
       "title": "Besuch der Altenheime",
       "type": "general",
-      "date": "30.07.2022 10:00",
+      "date": "2022-07-30T10:00:00",
       "formationen": null,
       "detail": "Besuch der Bewohner des Klosters zum Hl. Kreuz sowie des Dechaneihofes St. Marien."
     },
     {
       "title": "Freckenhorster Zeltfest",
       "type": "general",
-      "date": "30.07.2022 20:00",
+      "date": "2022-07-30T20:00:00",
       "formationen": null,
       "detail": "Freckenhorster Zeltfest mit DJ MARKO im Zelt und der Band „FINAL EDITION“ auf der Außenbühne."
     },
     {
       "title": "Antreten auf dem Stiftsmarkt",
       "type": "antreten",
-      "date": "31.07.2022 10:15",
+      "date": "2022-07-31T10:15:00",
       "formationen": [
         "all"
       ],
@@ -1792,14 +1792,14 @@
     {
       "title": "Schützenmesse",
       "type": "general",
-      "date": "31.07.2022 10:30",
+      "date": "2022-07-31T10:30:00",
       "formationen": null,
       "detail": "Festhochamt in der Stiftskirche."
     },
     {
       "title": "Antreten auf dem Stiftsmarkt",
       "type": "antreten",
-      "date": "31.07.2022 13:30",
+      "date": "2022-07-31T13:30:00",
       "formationen": [
         "all"
       ],
@@ -1808,21 +1808,21 @@
     {
       "title": "Nachmittagsprogramm",
       "type": "general",
-      "date": "31.07.2022 15:00",
+      "date": "2022-07-31T15:00:00",
       "formationen": null,
       "detail": "Die Bürgerschützen feiern mit ihren Familien und Gästen. Auf dem Festplatz an der Grundschule finden statt: Darbietungen aller Musikzüge, Königsschießen der Ehrengarde sowie der Formation der Damen (jeweils mit anschließender Krönung), Königsschießen der Jugend, Hampelmannschießen, auch für Nichtmitglieder. Bunter Familiennachmittag mit u.a. Schiffsschaukel, Kletterstange, Hüpfburg, Bogenschießen, Kisten stapeln, Bouletisch, Bungee-Run, verschiedenen Geschicklichkeitsspielen sowie dem Kinderkönigsschießen."
     },
     {
       "title": "Abendkonzert",
       "type": "general",
-      "date": "31.07.2022 19:15",
+      "date": "2022-07-31T19:15:00",
       "formationen": null,
       "detail": "Auf dem Stiftsmarkt gestaltet der Berittene Fanfarenzug ein Abendkonzert."
     },
     {
       "title": "Antreten auf dem Stiftsmarkt",
       "type": "antreten",
-      "date": "31.07.2022 19:25",
+      "date": "2022-07-31T19:25:00",
       "formationen": [
         "all"
       ],
@@ -1831,14 +1831,14 @@
     {
       "title": "Weckruf",
       "type": "general",
-      "date": "01.08.2022 05:00",
+      "date": "2022-08-01T05:00:00",
       "formationen": null,
       "detail": "Weckruf durch den Spielmannszug Freckenhorst."
     },
     {
       "title": "Antreten auf dem Festplatz",
       "type": "antreten",
-      "date": "01.08.2022 08:35",
+      "date": "2022-08-01T08:35:00",
       "formationen": [
         "ehrengarde",
         "jungschuetzen",
@@ -1849,7 +1849,7 @@
     {
       "title": "Antreten auf dem Stiftsmarkt",
       "type": "antreten",
-      "date": "01.08.2022 08:50",
+      "date": "2022-08-01T08:50:00",
       "formationen": [
         "schuetzen"
       ],
@@ -1858,49 +1858,49 @@
     {
       "title": "Empfang im Festzelt",
       "type": "general",
-      "date": "01.08.2022 10:30",
+      "date": "2022-08-01T10:30:00",
       "formationen": null,
       "detail": "Empfang im Festzelt für ehemalige Königinnen, ältere Schützen und Damen, Frauen der verstorbenen Mitglieder, Jubilare, Ehrenmitglieder und Ehrengäste."
     },
     {
       "title": "Königsschießen der Jungschützen",
       "type": "general",
-      "date": "01.08.2022 10:40",
+      "date": "2022-08-01T10:40:00",
       "formationen": null,
       "detail": "Beginn des Königsschießens der Jungschützen mit anschließender Krönung."
     },
     {
       "title": "Krönung des Kinderkönigspaares. ",
       "type": "general",
-      "date": "01.08.2022 11:00",
+      "date": "2022-08-01T11:00:00",
       "formationen": null,
       "detail": "Krönung des Kinderkönigspaares im Festzelt."
     },
     {
       "title": "Königsschießen",
       "type": "shooting",
-      "date": "01.08.2022 12:30",
+      "date": "2022-08-01T12:30:00",
       "formationen": null,
       "detail": "Beginn des Schießens um die Königswürde."
     },
     {
       "title": "Hampelmannschießen",
       "type": "general",
-      "date": "01.08.2022 15:00",
+      "date": "2022-08-01T15:00:00",
       "formationen": null,
       "detail": "Hampelmannschießen für Mitglieder."
     },
     {
       "title": "Hampelmannschießen",
       "type": "general",
-      "date": "01.08.2022 15:45",
+      "date": "2022-08-01T15:45:00",
       "formationen": null,
       "detail": "Hampelmannschießen auch für Nichtmitglieder."
     },
     {
       "title": "Antreten auf der Festwiese",
       "type": "antreten",
-      "date": "01.08.2022 16:30",
+      "date": "2022-08-01T16:30:00",
       "formationen": [
         "all"
       ],
@@ -1909,21 +1909,21 @@
     {
       "title": "Krönung",
       "type": "general",
-      "date": "01.08.2022 17:00",
+      "date": "2022-08-01T17:00:00",
       "formationen": null,
       "detail": "Krönung des neuen Königspaares durch den Präsidenten Matthias Kalthöner. Anschließend Parade zu Ehren der Majestäten."
     },
     {
       "title": "Abendkonzert",
       "type": "general",
-      "date": "01.08.2022 19:30",
+      "date": "2022-08-01T19:30:00",
       "formationen": null,
       "detail": "Abendkonzert auf der Stiftsmarkt mit dem Gebrasa Spielmannszug Sassenberg."
     },
     {
       "title": "Antreten auf dem Stiftsmarkt",
       "type": "antreten",
-      "date": "01.08.2022 20:00",
+      "date": "2022-08-01T20:00:00",
       "formationen": [
         "all"
       ],
@@ -1932,14 +1932,14 @@
     {
       "title": "Aufräumen",
       "type": "general",
-      "date": "02.08.2022 10:30",
+      "date": "2022-08-02T10:30:00",
       "formationen": null,
       "detail": "Treffen zum Aufräumen auf dem Festplatz."
     },
     {
       "title": "Ausklang",
       "type": "general",
-      "date": "02.08.2022 18:00",
+      "date": "2022-08-02T18:00:00",
       "formationen": null,
       "detail": "Ausklang des Bürgerschützenfestes in der Gaststätte Stiftshof Dühlmann."
     }
