@@ -1191,7 +1191,7 @@
       "beginn_jahr": 2022,
       "beschreibung": "",
       "bisherige_regentschaften": 0,
-      "ende_jahr": 9999,
+      "ende_jahr": 2023,
       "geschlecht_koenig": "m",
       "geschlecht_koenigin": "w",
       "hofstaat": [
@@ -1202,12 +1202,35 @@
       "koenigsschuss": 328,
       "name": "Richard Uhkötter",
       "name_begleitung": "Sandra Uhkötter"
+    },
+    {
+      "beginn_jahr": 2023,
+      "beschreibung": "",
+      "bisherige_regentschaften": 0,
+      "ende_jahr": 9999,
+      "geschlecht_koenig": "m",
+      "geschlecht_koenigin": "w",
+      "hofstaat": [
+        "Steffi und Sascha Nilles",
+        "Anne und Andreas Peveling,",
+        "Michaela und Lutz Tietze",
+        "Anja und Michael „Luchti“ Luchtefeld",
+        "Axel Ruhenstroht und Jennifer Hickey-Ruhenstroth"
+      ],
+      "koenigsschuss": 359,
+      "name": "Thomas Dorgeist",
+      "name_begleitung": "Carina Dorgeist"
     }
   ],
   "damen": [
     {
-      "beginn_jahr": 2022,
+      "beginn_jahr": 2023,
       "ende_jahr": 9999,
+      "name": "Clara Hövener"
+    },
+    {
+      "beginn_jahr": 2022,
+      "ende_jahr": 2023,
       "name": "Anna Klosterkamp"
     },
     {
@@ -1253,8 +1276,13 @@
   ],
   "jungschuetzen": [
     {
-      "beginn_jahr": 2022,
+      "beginn_jahr": 2023,
       "ende_jahr": 9999,
+      "name": "Tobias Böhmer"
+    },
+    {
+      "beginn_jahr": 2022,
+      "ende_jahr": 2023,
       "name": "Bernd Adick"
     },
     {
@@ -1510,8 +1538,13 @@
   ],
   "ehrengarde": [
     {
-      "beginn_jahr": 2022,
+      "beginn_jahr": 2023,
       "ende_jahr": 9999,
+      "name": "Peveling"
+    },
+    {
+      "beginn_jahr": 2022,
+      "ende_jahr": 2023,
       "name": "Friehe"
     },
     {
