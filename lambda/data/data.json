@@ -1207,12 +1207,12 @@
       "beginn_jahr": 2023,
       "beschreibung": "",
       "bisherige_regentschaften": 0,
-      "ende_jahr": 9999,
+      "ende_jahr": 2024,
       "geschlecht_koenig": "m",
       "geschlecht_koenigin": "w",
       "hofstaat": [
         "Steffi und Sascha Nilles",
-        "Anne und Andreas Peveling,",
+        "Anne und Andreas Peveling",
         "Michaela und Lutz Tietze",
         "Anja und Michael „Luchti“ Luchtefeld",
         "Axel Ruhenstroht und Jennifer Hickey-Ruhenstroth"
@@ -1220,12 +1220,33 @@
       "koenigsschuss": 359,
       "name": "Thomas Dorgeist",
       "name_begleitung": "Carina Dorgeist"
+    },
+    {
+      "beginn_jahr": 2024,
+      "beschreibung": "",
+      "bisherige_regentschaften": 0,
+      "ende_jahr": 9999,
+      "geschlecht_koenig": "m",
+      "geschlecht_koenigin": "w",
+      "hofstaat": [
+        "Michaela Leik-Wilczek und Michael Wilczek",
+        "Jutta und Dieter Farwick",
+        "oris und Bernd Hövener"
+      ],
+      "koenigsschuss": 496,
+      "name": "Jörg Kahlert",
+      "name_begleitung": "Jessica Kahlert"
     }
   ],
   "damen": [
     {
-      "beginn_jahr": 2023,
+      "beginn_jahr": 2024,
       "ende_jahr": 9999,
+      "name": "Hanna Nüßing"
+    },
+    {
+      "beginn_jahr": 2023,
+      "ende_jahr": 2024,
       "name": "Clara Hövener"
     },
     {
@@ -1276,8 +1297,13 @@
   ],
   "jungschuetzen": [
     {
-      "beginn_jahr": 2023,
+      "beginn_jahr": 2024,
       "ende_jahr": 9999,
+      "name": "Till Nienberg"
+    },
+    {
+      "beginn_jahr": 2023,
+      "ende_jahr": 2024,
       "name": "Tobias Böhmer"
     },
     {
@@ -1538,8 +1564,13 @@
   ],
   "ehrengarde": [
     {
-      "beginn_jahr": 2023,
+      "beginn_jahr": 2024,
       "ende_jahr": 9999,
+      "name": "Lenfers"
+    },
+    {
+      "beginn_jahr": 2023,
+      "ende_jahr": 2024,
       "name": "Peveling"
     },
     {
