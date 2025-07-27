@@ -1239,9 +1239,14 @@
     }
   ],
   "damen": [
+        {
+      "beginn_jahr": 2025,
+      "ende_jahr": 9999,
+      "name": "Friederike Risse"
+    },
     {
       "beginn_jahr": 2024,
-      "ende_jahr": 9999,
+      "ende_jahr": 2025,
       "name": "Hanna Nüßing"
     },
     {
@@ -1563,9 +1568,14 @@
     }
   ],
   "ehrengarde": [
+        {
+      "beginn_jahr": 2025,
+      "ende_jahr": 9999,
+      "name": "Peveling"
+    },
     {
       "beginn_jahr": 2024,
-      "ende_jahr": 9999,
+      "ende_jahr": 2025,
       "name": "Lenfers"
     },
     {
