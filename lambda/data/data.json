@@ -1225,7 +1225,7 @@
       "beginn_jahr": 2024,
       "beschreibung": "",
       "bisherige_regentschaften": 0,
-      "ende_jahr": 9999,
+      "ende_jahr": 2025,
       "geschlecht_koenig": "m",
       "geschlecht_koenigin": "w",
       "hofstaat": [
@@ -1236,6 +1236,22 @@
       "koenigsschuss": 496,
       "name": "Jörg Kahlert",
       "name_begleitung": "Jessica Kahlert"
+    },
+    {
+      "beginn_jahr": 2025,
+      "beschreibung": "",
+      "bisherige_regentschaften": 0,
+      "ende_jahr": 9999,
+      "geschlecht_koenig": "m",
+      "geschlecht_koenigin": "w",
+      "hofstaat": [
+        "XX YY",
+        "XX YY",
+        "XX YY"
+      ],
+      "koenigsschuss": 0,
+      "name": "XX",
+      "name_begleitung": "XY"
     }
   ],
   "damen": [
