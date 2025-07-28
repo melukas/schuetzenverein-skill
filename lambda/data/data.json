@@ -1225,7 +1225,7 @@
       "beginn_jahr": 2024,
       "beschreibung": "",
       "bisherige_regentschaften": 0,
-      "ende_jahr": 9999,
+      "ende_jahr": 2025,
       "geschlecht_koenig": "m",
       "geschlecht_koenigin": "w",
       "hofstaat": [
@@ -1236,6 +1236,24 @@
       "koenigsschuss": 496,
       "name": "Jörg Kahlert",
       "name_begleitung": "Jessica Kahlert"
+    },
+    {
+      "beginn_jahr": 2025,
+      "beschreibung": "",
+      "bisherige_regentschaften": 0,
+      "ende_jahr": 9999,
+      "geschlecht_koenig": "m",
+      "geschlecht_koenigin": "w",
+      "hofstaat": [
+        "Judith und Dirk Jasper",
+        "Kathrin und Frank Hartmeyer",
+        "Sabine und Christian Markfort",
+        "Annika und Michael Rövekamp",
+        "Mareike Volkmann und Christian Klosterkamp"
+      ],
+      "koenigsschuss": 386,
+      "name": "Michael Gronewäller",
+      "name_begleitung": "Frederike Gronewäller"
     }
   ],
   "damen": [
@@ -1302,8 +1320,13 @@
   ],
   "jungschuetzen": [
     {
-      "beginn_jahr": 2024,
+      "beginn_jahr": 2025,
       "ende_jahr": 9999,
+      "name": "Jan Haase"
+    },    
+    {
+      "beginn_jahr": 2024,
+      "ende_jahr": 2025,
       "name": "Till Nienberg"
     },
     {
@@ -1571,7 +1594,7 @@
         {
       "beginn_jahr": 2025,
       "ende_jahr": 9999,
-      "name": "Peveling"
+      "name": "Reimer"
     },
     {
       "beginn_jahr": 2024,
